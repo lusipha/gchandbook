@@ -1,0 +1,12 @@
+---
+layout: default
+title: 我的Blog
+---
+<h2>{{ page.title }}</h2>
+<p>最新文章</p>
+<ul>
+{% for post in site.posts %}
+<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门</a>
+</ul>
